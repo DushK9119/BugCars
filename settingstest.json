@@ -1,0 +1,7 @@
+{
+  "ApplicationBaseUrl": "https://buggy.justtestit.org/",
+  "WebDriver": {
+    "IsHeadless": true,
+    "ImplicitWaitInSeconds": 10
+  }
+}
