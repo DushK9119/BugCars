@@ -1,6 +1,5 @@
 ﻿using BugCars.Contexts;
 using BugCars.Models;
-using System;
 using Microsoft.Extensions.Configuration;
 using TechTalk.SpecFlow;
 
@@ -18,13 +17,11 @@ namespace BugCars.Hooks
         [BeforeScenario]
         public void BeforeScenario()
         {
-            var config = new ConfigurationBuilder()
+            var config = new ConfigBuilder()
             .AddJsonFile("testsettings.json", optional: false)
             .Build();
 
-            _testConfigurationContext.Configuration = config.Get<ConfigurationModel>();
+            _testConfigurationContext.Configuration = config.Get<ConfigModel>();
         }
     }
-
-
 }

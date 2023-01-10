@@ -117,9 +117,9 @@ this.FeatureBackground();
                             "Password",
                             "ConfirmPassword"});
                 table1.AddRow(new string[] {
-                            "Ginny",
-                            "Ginny",
-                            "Georgia",
+                            "random",
+                            "Jane",
+                            "Doe",
                             "Pa$$w0rd",
                             "Pa$$w0rd"});
 #line 8
@@ -176,9 +176,9 @@ this.FeatureBackground();
                             "Password",
                             "ConfirmPassword"});
                 table2.AddRow(new string[] {
-                            "Ginny",
-                            "Ginny",
-                            "Georgia",
+                            "john",
+                            "Jane",
+                            "Doe",
                             "Pa$$w0rd",
                             "Pa$$w0rd"});
 #line 17

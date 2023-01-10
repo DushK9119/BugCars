@@ -18,10 +18,10 @@ namespace BugCars.WebElements
             _configurationContext = configurationContext;
         }
 
- //       public HomePage(WebDriverContext webDriverContext, ConfigurationContext configurationContext) : base(webDriverContext)
-   //     {
-     //       this.configurationContext = configurationContext;
-       // }
+        public HomePage(WebDriverContext webDriverContext, ConfigurationContext configurationContext) : base(webDriverContext)
+        {
+            this.configurationContext = configurationContext;
+        }
 
         public IWebElement HomeSection => _webDriverContext.ChromeDriver.FindElement(By.XPath("//my-home"));
 

@@ -1,5 +1,5 @@
-﻿using BugCars.Contexts;
-using BugCars.Providers;
+﻿using BuggyCarsRating.Tests.Contexts;
+using BuggyCarsRating.Tests.Providers;
 using NUnit.Framework;
 using System;
 using TechTalk.SpecFlow;

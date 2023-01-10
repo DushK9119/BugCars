@@ -54,7 +54,7 @@ namespace BugCars.Steps
         [Then(@"I will see user already exist error")]
         public void ThenIWillSeeUserAlreadyExistError()
         {
-            Assert.AreEqual("UsernameExistsException: User already exists", _webElementContext.Registration.RegistrationResult.Text);
+            Assert.AreEqual("UsernameExistsException: User already exists", _webElementContext.RegistrationPage.RegistrationResult.Text);
         }
 
         #endregion
@@ -63,25 +63,25 @@ namespace BugCars.Steps
         [Given(@"I enter username (.*) and password (.*)")]
         public void GivenIEnterUsernameJohnAndPasswordPassword(string username, string password)
         {
-            _webElementContext.Login.EnterLoginCredentials(username, password);
+            _webElementContext.LoginForm.EnterLoginCredentials(username, password);
         }
 
         [When(@"I click login button")]
         public void WhenIClickLoginButton()
         {
-            _webElementContext.Login.ClickLoginButton();
+            _webElementContext.LoginForm.ClickLoginButton();
         }
 
         [Then(@"I should be logged in")]
         public void ThenIShouldBeLoggedIn()
         {
-            Assert.That(_webElementContext.Navigation.IsUserLoggedIn(), Is.True);
+            Assert.That(_webElementContext.UserNavigation.IsUserLoggedIn(), Is.True);
         }
 
         [Then(@"I should not be logged in")]
         public void ThenIShouldNotBeLoggedIn()
         {
-            Assert.That(_webElementContext.Login.InvalidCredentialError.Displayed, Is.True);
+            Assert.That(_webElementContext.LoginForm.InvalidCredentialError.Displayed, Is.True);
         }
 
         #endregion
@@ -90,20 +90,20 @@ namespace BugCars.Steps
         [Given(@"I am logged in")]
         public void GivenIAmLoggedIn()
         {
-            Given($"I enter username Jane and password Pa$$w0rd");
-            When(@"I click login button");
+            [Given($"I enter username Jane and password Pa$$w0rd")];
+            [When(@"I click login button")];
         }
 
         [When(@"I click logout button")]
         public void WhenIClickLogoutButton()
         {
-            _webElementContext.Navigation.ClickLogoutLink();
+            _webElementContext.UserNavigation.ClickLogoutLink();
         }
 
         [Then(@"I should be logged out")]
         public void ThenIShouldBeLoggedOut()
         {
-            Assert.That(_webElementContext.Login.Form.Displayed, Is.True);
+            Assert.That(_webElementContext.LoginForm.Form.Displayed, Is.True);
         }
         #endregion
     }

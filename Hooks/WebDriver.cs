@@ -1,4 +1,4 @@
-﻿using BugCars.Providers;
+﻿using BuggyCarsRating.Tests.Providers;
 using TechTalk.SpecFlow;
 
 namespace BuggyCarsRating.Tests.Hooks
