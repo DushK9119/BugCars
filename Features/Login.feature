@@ -3,7 +3,7 @@
 
 @login
 Scenario: Login with valid credentials
-	Given I enter username Giny and password Pa$$w0rd
+	Given I enter username Ginny and password Pa$$w0rd
 	When I click login button
 	Then I should be logged in
 
